@@ -49,7 +49,7 @@ for cols in columns:
     if cols in df[columns]:
         df[cols] = df[cols].str[:19].astype('datetime64[ns]')
 
-## NOTE: RETRIEVE ADDITIONAL LOCATION ATTRIBUTES FROM GOOGLE MAPS API
+## NOTE: RETRIEVE ADDITIONAL LOCATION ATTRIBUTES FROM GOOGLE MAPS API 
 def getplace(lat, lon):
     try:
         url = "https://maps.googleapis.com/maps/api/geocode/json?latlng={0},{1}&sensor=false&key={2}".format(lat,lon,gmapkey)
